@@ -8,6 +8,19 @@ window.onload = function () {
     var name = document.getElementById("nome").value;
     var username = document.getElementById("username").value;
     var birthdate = document.getElementById("date").value;
+    var booleano;
+
+    function validateEmail(email) {
+      const re = /^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+      booleano = re.test(String(email).toLowerCase());
+      
+
+  }
+    validateEmail(email)
+    if (booleano == false) {
+      Swal.fire("Preencha o email corretamente", "", "error");
+      return;
+    }
 
     // Validation
     if (email && password && name && username && birthdate !== null) {
