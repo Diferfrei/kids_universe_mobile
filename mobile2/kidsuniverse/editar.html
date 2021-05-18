@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
@@ -85,6 +85,19 @@
       width: 75%;
     }
 
+    #botaoPdiv {
+      text-align: center;
+    }
+
+    #botaoPhoto {
+      top: 9.5vh;
+      background-color: rgb(6, 41, 65);
+      color: white !important;
+      width: 65%;
+      text-align: center;
+      line-height: 3.75em;
+    }
+
     body {
       background-image: url("images/background_perfil.png");
       background-size: cover;
@@ -106,7 +119,7 @@
       margin-left: 2vh;
       margin-right: 2vh;
       border-radius: 25px;
-      height: 41vh;
+      height: 43vh;
     }
 
     .barra2 {
@@ -164,15 +177,18 @@
           <input type="password" name="demo-email" id="conf" value="" placeholder="Confirmar Password"
             data-rule="required" />
         </div>
+        <div class="col-md-12" id="botaoPdiv">
+          <li><a href="#" class="button primary" id="botaoPhoto" onclick="editPhoto()">Tirar nova Foto</a></li>
+        </div>
       </div>
     </form>
   </div>
   <ul class="actions">
-    <li><a href="#" class="button primary" id="botaoI" onclick="EditProfile()">Guardar</a></li>
+    <li><a href="#" class="button primary" id="botaoI" onclick="editProfile()">Guardar</a></li>
   </ul>
   </div>
   <div class="barra2">
-    <a href="javascript:history.back()"><i class="fas fa-arrow-left"></i></a>
+    <a href="perfil.html"><i class="fas fa-arrow-left"></i></a>
     EDITAR PERFIL
   </div>
 

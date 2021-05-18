@@ -1,7 +1,12 @@
+function editPhoto() {
+  Swal.fire("De seguida, tire uma foto para atualizar o seu perfil", "", "info").then(
+    (result) => {
+      window.location = "cam_screen_edit.html";
+    }
+  )
+}
 
-
-
-function EditProfile() {
+function editProfile() {
 
     const id = localStorage.getItem("id");
   
@@ -12,11 +17,11 @@ function EditProfile() {
   data.password = palavraPass;
   data.email = document.getElementById("email").value;
   const nasc = localStorage.getItem("birthdate");
-  const phone =localStorage.getItem("phone");
+  const phone = localStorage.getItem("phone");
+  const photo = localStorage.getItem("photo");
   data.birthdate= nasc;
   data.phone_number= phone; 
-
- 
+  data.photo = photo;
   
   if (
     data.email === "" ||
